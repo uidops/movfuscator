@@ -13,10 +13,6 @@ mkdir -p "$BUILDDIR"
 mkdir -p "$BUILDDIR/include"
 cp -p -R lcc/include/x86/linux/* "$BUILDDIR/include"
 
-# Link to gcc's library directory
-GCCLN=$(gcc --print-search-dirs | grep install | head -1 | cut -d " " -f 2-)
-ln -sfn "$GCCLN" "$BUILDDIR/gcc"
-
 # Bind to the backend
 patch -N -r - lcc/src/bind.c movfuscator/bind.patch
 
