@@ -3,7 +3,7 @@
 set -v
 
 # grab the frontend
-[ ! -d "lcc" ] && git clone https://github.com/drh/lcc
+[ ! -d "lcc" ] && git clone https://github.com/uidops/lcc
 
 # create a build directory
 export BUILDDIR=`pwd`/build
