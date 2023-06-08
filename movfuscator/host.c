@@ -62,7 +62,7 @@ char *com[]={
 
 char *as[]={
 	"/usr/bin/as",
-	"--32",
+	"-arch=x86",
 	"-o",
 	"$3",
 	"$1",
